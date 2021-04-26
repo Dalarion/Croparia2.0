@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI", 
+    "SPS", 
+    "ISI"
+  ],
+  "key": {
+    "P": {
+      "item": "croparia:croparia3"
+    },
+    "S": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:seagrass"
+    }
+    ],
+    "I": {
+      "item": "minecraft:nautilus_shell"
+    }
+  },
+  "result": {
+    "item": "croparia:seed_crop_nautilus"
+  },
+    "group": "CropariaT3"
+}

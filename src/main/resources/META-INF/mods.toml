@@ -1,0 +1,17 @@
+modLoader="javafml" #mandatory
+loaderVersion="[35,)" #mandatory
+license="All rights reserved" #mandatory https://choosealicense.com/
+issueTrackerURL="" #optional
+ 
+[[mods]] #mandatory
+modId="croparia" #mandatory
+version="3.1.1" #mandatory
+displayName="Croparia" #mandatory
+updateJSONURL="" #optional
+displayURL="" #optional
+logoFile="" #optional
+credits="" #optional
+authors="Defacto34" #optional
+description='''
+A mod of Crops and Resources. This is the best mod. The best.
+''' #mandatory

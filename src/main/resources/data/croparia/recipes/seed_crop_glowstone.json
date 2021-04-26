@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI", 
+    "SPS", 
+    "ISI"
+  ],
+  "key": {
+    "P": {
+      "item": "croparia:croparia3"
+    },
+   "S": [
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "minecraft:pumpkin_seeds"
+    },
+    {
+      "item": "minecraft:melon_seeds"
+    },
+    {
+      "item": "minecraft:beetroot_seeds"
+    }
+    ],
+    "I": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "result": {
+    "item": "croparia:seed_crop_glowstone"
+  },
+    "group": "CropariaT3"
+}

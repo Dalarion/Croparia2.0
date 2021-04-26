@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI", 
+    "SPS", 
+    "ISI"
+  ],
+  "key": {
+    "P": {
+      "item": "croparia:croparia"
+    },
+    "S": 
+    {
+      "item": "minecraft:sugar_cane"
+    },
+    "I": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "croparia:seed_crop_sugar"
+  },
+    "group": "CropariaSeedT1"
+}

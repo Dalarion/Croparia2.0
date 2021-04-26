@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:egg"
+      
+    },
+	{
+      "item": "minecraft:sugar"
+      
+    },
+	{
+      "item": "croparia:lemon"
+      
+    },
+   	{
+      "item": "croparia:lemon"
+      
+    },
+		{
+      "item": "croparia:lemon"
+      
+    }
+  ],
+  "result": {
+    "item": "croparia:lemon_pie",
+    "count": 1
+  }
+}

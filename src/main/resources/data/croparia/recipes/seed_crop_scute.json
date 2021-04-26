@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI", 
+    "SPS", 
+    "ISI"
+  ],
+  "key": {
+    "P": {
+      "item": "croparia:croparia2"
+    },
+     "S": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:seagrass"
+    }
+    ],
+    "I": {
+      "item": "minecraft:scute"
+    }
+  },
+  "result": {
+    "item": "croparia:seed_crop_scute"
+  },
+    "group": "CropariaT2"
+}
