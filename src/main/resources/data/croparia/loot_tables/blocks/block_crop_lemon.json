@@ -12,17 +12,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "croparia:cherry_crop",
+                  "block": "croparia:block_crop_lemon",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "croparia:cherry"
+              "name": "croparia:seed_crop_lemon"
             },
             {
               "type": "minecraft:item",
-              "name": "croparia:cherry"
+              "name": "croparia:seed_crop_lemon"
             }
           ]
         }
@@ -44,13 +44,13 @@
               }
             }
           ],
-          "name": "croparia:cherry"
+          "name": "croparia:seed_crop_lemon"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "croparia:cherry_crop",
+          "block": "croparia:block_crop_lemon",
           "properties": {
             "age": "7"
           }

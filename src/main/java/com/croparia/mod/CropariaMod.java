@@ -6,12 +6,12 @@ import org.apache.logging.log4j.Logger;
 import com.croparia.mod.client.render.RenderingHandler;
 import com.croparia.mod.core.init.BlockInit;
 import com.croparia.mod.core.init.ContainerInit;
+import com.croparia.mod.core.init.CropsInit;
 import com.croparia.mod.core.init.ItemInit;
 import com.croparia.mod.core.init.TileEntityInit;
 import com.croparia.mod.core.util.ModDispenserBehavior;
 import com.croparia.mod.core.util.ModPotionBrewing;
 import com.croparia.mod.core.util.ModRecipesRegistry;
-import com.croparia.mod.event.EventHandler;
 import com.croparia.mod.world.generation.PlantsGenerations;
 
 import net.minecraft.entity.player.PlayerEntity;
@@ -43,12 +43,12 @@ public class CropariaMod
         bus.addListener(this::doClientStuff);
         bus.addGenericListener(Feature.class, PlantsGenerations::registerFeatures);
         
+        CropsInit.register();
         ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
 		TileEntityInit.TILE_ENTITIES.register(bus);
 		ContainerInit.CONTAINER_TYPES.register(bus);
 		
-		MinecraftForge.EVENT_BUS.register(EventHandler.class);
 		MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, PlantsGenerations::generatePlants);
   
         MinecraftForge.EVENT_BUS.register(this);
@@ -89,7 +89,7 @@ public class CropariaMod
 		}
 		@Override
 		public ItemStack createIcon() {
-			return ItemInit.ELEMENTAL_SEED.get().getDefaultInstance();
+			return CropsInit.ELEMENTAL.getSeeds().get().getDefaultInstance();
 		}
     }
 }

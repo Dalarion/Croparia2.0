@@ -5,7 +5,7 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 
-import com.croparia.mod.core.init.BlockInit;
+import com.croparia.mod.core.init.CropsInit;
 import com.croparia.mod.core.util.FruitsEnum;
 import com.croparia.mod.world.config.PlantsConfig;
 import com.google.common.collect.ImmutableSet;
@@ -41,7 +41,7 @@ public class FruitsFeature extends Feature<PlantsConfig> {
 				int y = world.getHeight(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, x, z);
 
 				FruitsEnum fruit = FruitsEnum.byId(rand.nextInt(7));
-				BlockState state = BlockInit.getFruit(fruit).get().getDefaultState().with(CropsBlock.AGE, 7);
+				BlockState state = CropsInit.getFruit(fruit).getCrop().get().getDefaultState().with(CropsBlock.AGE, 7);
 
 				for (int j = 0; j < config.getPatchDensity() * config.getPatchChance(); j++) {
 					int x1 = x + rand.nextInt(dist * 2) - dist;

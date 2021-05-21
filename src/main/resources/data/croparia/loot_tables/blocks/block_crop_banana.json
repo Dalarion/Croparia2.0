@@ -12,17 +12,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "croparia:banana_crop",
+                  "block": "croparia:block_crop_banana",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "croparia:banana"
+              "name": "croparia:seed_crop_banana"
             },
             {
               "type": "minecraft:item",
-              "name": "croparia:banana"
+              "name": "croparia:seed_crop_banana"
             }
           ]
         }
@@ -44,13 +44,13 @@
               }
             }
           ],
-          "name": "croparia:banana"
+          "name": "croparia:seed_crop_banana"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "croparia:banana_crop",
+          "block": "croparia:block_crop_banana",
           "properties": {
             "age": "7"
           }

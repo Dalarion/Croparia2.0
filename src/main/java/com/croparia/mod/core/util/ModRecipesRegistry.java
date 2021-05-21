@@ -1,6 +1,7 @@
 package com.croparia.mod.core.util;
 
 import com.croparia.mod.core.init.BlockInit;
+import com.croparia.mod.core.init.CropsInit;
 import com.croparia.mod.core.init.ItemInit;
 import com.croparia.mod.core.util.recipes.InfusorRecipe;
 import com.croparia.mod.core.util.recipes.RitualRecipe;
@@ -24,16 +25,16 @@ public class ModRecipesRegistry {
 		InfusorRecipe.addRecipe("croparia6", ItemInit.CROPARIA5.get(), ElementsEnum.ELEMENTAL, ItemInit.CROPARIA6.get());
 		InfusorRecipe.addRecipe("croparia7", ItemInit.CROPARIA6.get(), ElementsEnum.ELEMENTAL, ItemInit.CROPARIA7.get());
 		
-		InfusorRecipe.addRecipe("elemental_seed1", Items.BEETROOT_SEEDS, ElementsEnum.ELEMENTAL, ItemInit.ELEMENTAL_SEED.get());
-		InfusorRecipe.addRecipe("elemental_seed2", Items.WHEAT_SEEDS, ElementsEnum.ELEMENTAL, ItemInit.ELEMENTAL_SEED.get());
+		InfusorRecipe.addRecipe("elemental_seed1", Items.BEETROOT_SEEDS, ElementsEnum.ELEMENTAL, CropsInit.ELEMENTAL.getSeeds().get());
+		InfusorRecipe.addRecipe("elemental_seed2", Items.WHEAT_SEEDS, ElementsEnum.ELEMENTAL, CropsInit.ELEMENTAL.getSeeds().get());
 	
-		InfusorRecipe.addRecipe("iron_seed", ItemInit.COAL_SEED.get(), ElementsEnum.ELEMENTAL, ItemInit.IRON_SEED.get());
-		InfusorRecipe.addRecipe("gold_seed", ItemInit.IRON_SEED.get(), ElementsEnum.ELEMENTAL, ItemInit.GOLD_SEED.get());
-		InfusorRecipe.addRecipe("redstone_seed", ItemInit.GOLD_SEED.get(), ElementsEnum.ELEMENTAL, ItemInit.REDSTONE_SEED.get());
-		InfusorRecipe.addRecipe("lapis_seed", ItemInit.REDSTONE_SEED.get(), ElementsEnum.ELEMENTAL, ItemInit.LAPIS_SEED.get());
-		InfusorRecipe.addRecipe("diamond_seed", ItemInit .LAPIS_SEED.get(), ElementsEnum.ELEMENTAL, ItemInit.DIAMOND_SEED.get());
-		InfusorRecipe.addRecipe("emerald_seed", ItemInit .DIAMOND_SEED.get(), ElementsEnum.ELEMENTAL, ItemInit.EMERALD_SEED.get());
-
+		InfusorRecipe.addRecipe("iron_seed", CropsInit.COAL.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.IRON.getSeeds().get());
+		InfusorRecipe.addRecipe("gold_seed", CropsInit.IRON.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.GOLD.getSeeds().get());
+/*		InfusorRecipe.addRecipe("redstone_seed", CropsInit.GOLD.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.REDSTONE.getSeeds().get());
+		InfusorRecipe.addRecipe("lapis_seed", CropsInit.REDSTONE.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.LAPIS.getSeeds().get());
+		InfusorRecipe.addRecipe("diamond_seed", CropsInit.LAPIS.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.DIAMOND.getSeeds().get());
+		InfusorRecipe.addRecipe("emerald_seed", CropsInit.DIAMOND.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.EMERALD.getSeeds().get());
+*/
 		InfusorRecipe.addRecipe("elemental_water", Items.PRISMARINE, ElementsEnum.ELEMENTAL, ItemInit.ELEMENTAL_WATER.get());
 		InfusorRecipe.addRecipe("elemental_fire", Items.MAGMA_BLOCK, ElementsEnum.ELEMENTAL, ItemInit.ELEMENTAL_FIRE.get());
 		InfusorRecipe.addRecipe("elemental_earth", Items.PODZOL, ElementsEnum.ELEMENTAL, ItemInit.ELEMENTAL_EARTH.get());

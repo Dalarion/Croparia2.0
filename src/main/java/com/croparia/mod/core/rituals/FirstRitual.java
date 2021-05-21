@@ -1,7 +1,9 @@
 package com.croparia.mod.core.rituals;
 
-import com.croparia.mod.common.blocks.BlockCropMod;
+import com.croparia.mod.common.blocks.CropariaCrops;
+import com.croparia.mod.common.blocks.CropariaCrops;
 import com.croparia.mod.core.init.BlockInit;
+import com.croparia.mod.core.init.CropsInit;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -15,9 +17,9 @@ public class FirstRitual extends RitualUtils
 	{
 		if(getBlock(BlockInit.ELEMENTAL_STONE.get(), pos.down(), worldIn))
 		{
-			if(getBlockState(BlockInit.IRON_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.north().east(), worldIn) && getBlockState(BlockInit.IRON_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.north().west(), worldIn) && getBlockState(BlockInit.IRON_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.south().east(), worldIn) && getBlockState(BlockInit.IRON_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.south().west(), worldIn))	
+			if(getBlockState(CropsInit.IRON.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.north().east(), worldIn) && getBlockState(CropsInit.IRON.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.north().west(), worldIn) && getBlockState(CropsInit.IRON.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.south().east(), worldIn) && getBlockState(CropsInit.IRON.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.south().west(), worldIn))	
 			{
-				if(getBlockState(BlockInit.GOLD_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.north(3), worldIn) && getBlockState(BlockInit.GOLD_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.south(3), worldIn) && getBlockState(BlockInit.GOLD_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.east(3), worldIn) && getBlockState(BlockInit.GOLD_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.west(3), worldIn))
+				if(getBlockState(CropsInit.GOLD.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.north(3), worldIn) && getBlockState(CropsInit.GOLD.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.south(3), worldIn) && getBlockState(CropsInit.GOLD.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.east(3), worldIn) && getBlockState(CropsInit.GOLD.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.west(3), worldIn))
 				{
 					if(getBlock(Blocks.WATER, pos.down().north(2).west(2), worldIn) && getBlock(Blocks.WATER, pos.down().north(2).east(2), worldIn) && getBlock(Blocks.WATER, pos.down().south(2).west(2), worldIn) && getBlock(Blocks.WATER, pos.down().south(2).east(2), worldIn))
 					{
@@ -56,14 +58,14 @@ public class FirstRitual extends RitualUtils
 	public static void placeRitual(World worldIn, BlockPos pos)
 	{
 		setBlock(BlockInit.ELEMENTAL_STONE.get(), pos.down(), worldIn);
-		setBlockState(BlockInit.IRON_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.north().east(), worldIn);
-		setBlockState(BlockInit.IRON_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.north().west(), worldIn);
-		setBlockState(BlockInit.IRON_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.south().east(), worldIn);
-		setBlockState(BlockInit.IRON_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.south().west(), worldIn);
-		setBlockState(BlockInit.GOLD_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.north(3), worldIn);
-		setBlockState(BlockInit.GOLD_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.south(3), worldIn);
-		setBlockState(BlockInit.GOLD_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.east(3), worldIn);
-		setBlockState(BlockInit.GOLD_CROP.get().getDefaultState().with(BlockCropMod.AGE, 7), pos.west(3), worldIn);
+		setBlockState(CropsInit.IRON.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.north().east(), worldIn);
+		setBlockState(CropsInit.IRON.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.north().west(), worldIn);
+		setBlockState(CropsInit.IRON.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.south().east(), worldIn);
+		setBlockState(CropsInit.IRON.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.south().west(), worldIn);
+		setBlockState(CropsInit.GOLD.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.north(3), worldIn);
+		setBlockState(CropsInit.GOLD.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.south(3), worldIn);
+		setBlockState(CropsInit.GOLD.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.east(3), worldIn);
+		setBlockState(CropsInit.GOLD.getCrop().get().getDefaultState().with(CropariaCrops.AGE, 7), pos.west(3), worldIn);
 		setBlockState(Blocks.FARMLAND.getDefaultState().with(FarmlandBlock.MOISTURE, 7), pos.north().east().down(), worldIn);
 		setBlockState(Blocks.FARMLAND.getDefaultState().with(FarmlandBlock.MOISTURE, 7), pos.north().west().down(), worldIn);
 		setBlockState(Blocks.FARMLAND.getDefaultState().with(FarmlandBlock.MOISTURE, 7), pos.south().east().down(), worldIn);

@@ -1,6 +1,7 @@
 package com.croparia.mod.common.items;
 
 import com.croparia.mod.CropariaMod;
+import com.croparia.mod.core.init.CropsInit;
 import com.croparia.mod.core.init.ItemInit;
 
 import net.minecraft.entity.item.ItemEntity;
@@ -54,13 +55,13 @@ public class ItemHornPlenty extends Item
 							new ItemStack(Items.POTATO),
 							new ItemStack(Items.PUFFERFISH),
 							new ItemStack(Items.TROPICAL_FISH),
-							new ItemStack(ItemInit.APRICOT.get()),
-							new ItemStack(ItemInit.CHERRY.get()),
-							new ItemStack(ItemInit.LEMON.get()),
-							new ItemStack(ItemInit.ORANGE.get()),
-							new ItemStack(ItemInit.KIWI.get()),
-							new ItemStack(ItemInit.PEAR.get()),
-							new ItemStack(ItemInit.BANANA.get()),
+							new ItemStack(CropsInit.APRICOT.getSeeds().get()),
+							new ItemStack(CropsInit.CHERRY.getSeeds().get()),
+							new ItemStack(CropsInit.LEMON.getSeeds().get()),
+							new ItemStack(CropsInit.ORANGE.getSeeds().get()),
+							new ItemStack(CropsInit.KIWI.getSeeds().get()),
+							new ItemStack(CropsInit.PEAR.getSeeds().get()),
+							new ItemStack(CropsInit.BANANA.getSeeds().get()),
 							new ItemStack(ItemInit.APRICOT_PIE.get()),
 							new ItemStack(ItemInit.CHERRY_PIE.get()),
 							new ItemStack(ItemInit.LEMON_PIE.get()),

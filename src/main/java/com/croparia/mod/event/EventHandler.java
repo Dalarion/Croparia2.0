@@ -5,15 +5,15 @@ import com.croparia.mod.core.init.BlockInit;
 import com.croparia.mod.core.init.ItemInit;
 import com.croparia.mod.core.util.ElementsEnum;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
+@EventBusSubscriber(modid = "croparia")
 public class EventHandler {
 		
 		@SubscribeEvent

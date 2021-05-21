@@ -1,6 +1,7 @@
 package com.croparia.mod.core.rituals;
 
 import com.croparia.mod.core.init.BlockInit;
+import com.croparia.mod.core.init.CropsInit;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -50,14 +51,14 @@ public class SecondRitual extends RitualUtils
 						&& getBlock(Blocks.SHROOMLIGHT, pos.up(2).north(4), worldIn)
 						&& getBlock(Blocks.SHROOMLIGHT, pos.up(2).south(4), worldIn))
 						{
-							if(getBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(3).west(2), worldIn)
-							&& getBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(3).east(2), worldIn)
-							&& getBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(3).west(2), worldIn)
-							&& getBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(3).east(2), worldIn)
-							&& getBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(2).west(3), worldIn)
-							&& getBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(2).east(3), worldIn)
-							&& getBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(2).west(3), worldIn)
-							&& getBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(2).east(3), worldIn))
+							if(getBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(3).west(2), worldIn)
+							&& getBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(3).east(2), worldIn)
+							&& getBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(3).west(2), worldIn)
+							&& getBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(3).east(2), worldIn)
+							&& getBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(2).west(3), worldIn)
+							&& getBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(2).east(3), worldIn)
+							&& getBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(2).west(3), worldIn)
+							&& getBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(2).east(3), worldIn))
 							{
 								return true;
 							}
@@ -117,13 +118,13 @@ public class SecondRitual extends RitualUtils
 		setBlockState(Blocks.FARMLAND.getDefaultState().with(FarmlandBlock.MOISTURE, 7), pos.down().north(2).east(3), worldIn);
 		setBlockState(Blocks.FARMLAND.getDefaultState().with(FarmlandBlock.MOISTURE, 7), pos.down().south(2).west(3), worldIn);
 		setBlockState(Blocks.FARMLAND.getDefaultState().with(FarmlandBlock.MOISTURE, 7), pos.down().south(2).east(3), worldIn);
-		setBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(3).west(2), worldIn);
-		setBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(3).east(2), worldIn);
-		setBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(3).west(2), worldIn);
-		setBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(3).east(2), worldIn);
-		setBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(2).west(3), worldIn);
-		setBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(2).east(3), worldIn);
-		setBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(2).west(3), worldIn);
-		setBlockState(BlockInit.ELEMENTAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(2).east(3), worldIn);
+		setBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(3).west(2), worldIn);
+		setBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(3).east(2), worldIn);
+		setBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(3).west(2), worldIn);
+		setBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(3).east(2), worldIn);
+		setBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(2).west(3), worldIn);
+		setBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.north(2).east(3), worldIn);
+		setBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(2).west(3), worldIn);
+		setBlockState(CropsInit.ELEMENTAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 7), pos.south(2).east(3), worldIn);
 	}
 }

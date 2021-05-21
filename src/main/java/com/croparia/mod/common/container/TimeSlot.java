@@ -19,7 +19,7 @@ public class TimeSlot extends Slot {
     
     @Override
     public int getSlotStackLimit() {
-       return 1;
+       return Integer.MAX_VALUE;
     }
     
  }

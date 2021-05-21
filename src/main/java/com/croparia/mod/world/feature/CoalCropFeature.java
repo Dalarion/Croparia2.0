@@ -5,7 +5,7 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 
-import com.croparia.mod.core.init.BlockInit;
+import com.croparia.mod.core.init.CropsInit;
 import com.croparia.mod.world.config.PlantsConfig;
 import com.google.common.collect.ImmutableSet;
 
@@ -39,7 +39,7 @@ public class CoalCropFeature extends Feature<PlantsConfig> {
 				int z = pos.getZ() + rand.nextInt(16);
 				int y = world.getHeight(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, x, z);
 
-				BlockState state = BlockInit.COAL_CROP.get().getDefaultState().with(CropsBlock.AGE, 5);
+				BlockState state = CropsInit.COAL.getCrop().get().getDefaultState().with(CropsBlock.AGE, 5);
 
 				for (int j = 0; j < config.getPatchDensity() * config.getPatchChance(); j++) {
 					int x1 = x + rand.nextInt(dist * 2) - dist;

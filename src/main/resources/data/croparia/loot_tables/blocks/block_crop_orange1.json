@@ -12,17 +12,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "croparia:kiwi_crop",
+                  "block": "croparia:block_crop_orange1",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "croparia:kiwi"
+              "name": "croparia:seed_crop_orange1"
             },
             {
               "type": "minecraft:item",
-              "name": "croparia:kiwi"
+              "name": "croparia:seed_crop_orange1"
             }
           ]
         }
@@ -44,13 +44,13 @@
               }
             }
           ],
-          "name": "croparia:kiwi"
+          "name": "croparia:seed_crop_orange1"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "croparia:kiwi_crop",
+          "block": "croparia:block_crop_orange1",
           "properties": {
             "age": "7"
           }

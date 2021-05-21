@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "croparia:fruit_gapple"
+      "item": "croparia:fruit_goldenapple"
     }
     ],
   "result": {
