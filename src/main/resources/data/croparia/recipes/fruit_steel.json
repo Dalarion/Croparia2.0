@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_steel"
+    }
+    ],
+  "result": {
+    "item": "croparia:steel_ingot",
+    "count": 2
+  }
+}

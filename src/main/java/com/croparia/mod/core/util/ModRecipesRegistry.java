@@ -30,11 +30,11 @@ public class ModRecipesRegistry {
 	
 		InfusorRecipe.addRecipe("iron_seed", CropsInit.COAL.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.IRON.getSeeds().get());
 		InfusorRecipe.addRecipe("gold_seed", CropsInit.IRON.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.GOLD.getSeeds().get());
-/*		InfusorRecipe.addRecipe("redstone_seed", CropsInit.GOLD.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.REDSTONE.getSeeds().get());
+		InfusorRecipe.addRecipe("redstone_seed", CropsInit.GOLD.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.REDSTONE.getSeeds().get());
 		InfusorRecipe.addRecipe("lapis_seed", CropsInit.REDSTONE.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.LAPIS.getSeeds().get());
 		InfusorRecipe.addRecipe("diamond_seed", CropsInit.LAPIS.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.DIAMOND.getSeeds().get());
 		InfusorRecipe.addRecipe("emerald_seed", CropsInit.DIAMOND.getSeeds().get(), ElementsEnum.ELEMENTAL, CropsInit.EMERALD.getSeeds().get());
-*/
+
 		InfusorRecipe.addRecipe("elemental_water", Items.PRISMARINE, ElementsEnum.ELEMENTAL, ItemInit.ELEMENTAL_WATER.get());
 		InfusorRecipe.addRecipe("elemental_fire", Items.MAGMA_BLOCK, ElementsEnum.ELEMENTAL, ItemInit.ELEMENTAL_FIRE.get());
 		InfusorRecipe.addRecipe("elemental_earth", Items.PODZOL, ElementsEnum.ELEMENTAL, ItemInit.ELEMENTAL_EARTH.get());
@@ -89,5 +89,6 @@ public class ModRecipesRegistry {
 		
 		RitualRecipe.addRecipe("accelerator", Items.CLOCK, BlockInit.ELEMENTAL_STONE.get().getDefaultState(), ItemInit.ACCELERATOR.get(), 2);
 		RitualRecipe.addRecipe("elemental_time", ItemInit.ELEMATILIUS.get(), BlockInit.ACCELERATOR.get().getDefaultState(), ItemInit.ELEMENTAL_TIME.get(), 2);
+		RitualRecipe.addRecipe("collector", ItemInit.RENFORCED_HOE.get(), Blocks.IRON_BLOCK.getDefaultState(), ItemInit.COLLECTOR.get(), 2);
 	}
 }

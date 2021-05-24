@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_refined_obsidian"
+    }
+    ],
+  "result": {
+    "item": "croparia:refined_obsidian_ingot",
+    "count": 2
+  }
+}

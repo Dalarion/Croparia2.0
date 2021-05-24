@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_refined_glowstone"
+    }
+    ],
+  "result": {
+    "item": "croparia:refined_glowstone_ingot",
+    "count": 2
+  }
+}

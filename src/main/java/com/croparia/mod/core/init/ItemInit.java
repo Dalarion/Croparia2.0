@@ -251,5 +251,9 @@ public class ItemInit {
 			crop.setFruit(null);
 		}
 	}	
+	
+	public static void registerIngredient(Crops crop, String suf) {
+		ITEMS.register(crop.getName() + "_" + suf,() -> new Item(new Item.Properties()));
+	}
 }
 

@@ -125,7 +125,22 @@ public class CropsInit {
 	public static final Crops COPPER = new Crops("copper", ModFood.FRUIT_RESISTANCE);
 	public static final Crops AMETHYST = new Crops("amethyst", ModFood.FRUIT_REGENERATION);
 	public static final Crops GOAT = new Crops("goat", ModFood.FRUIT_STRENGTH); 
-		
+	
+	public static final Crops BRONZE = new Crops("bronze", ModFood.FRUIT_RESISTANCE);
+	public static final Crops REFINED_OBSIDIAN = new Crops("refined_obsidian", ModFood.FRUIT_RESISTANCE);
+	public static final Crops REFINED_GLOWSTONE = new Crops("refined_glowstone", ModFood.FRUIT_RESISTANCE);
+	public static final Crops STEEL = new Crops("steel", ModFood.FRUIT_RESISTANCE);
+	public static final Crops OSMIUM = new Crops("osmium", ModFood.FRUIT_RESISTANCE);
+	public static final Crops TIN = new Crops("tin", ModFood.FRUIT_RESISTANCE);
+	public static final Crops LEAD = new Crops("lead", ModFood.FRUIT_RESISTANCE);
+	public static final Crops URANIUM = new Crops("uranium", ModFood.FRUIT_POISON);
+	
+	public static final Crops ALUMINIUM = new Crops("aluminium", ModFood.FRUIT_RESISTANCE);
+	public static final Crops SILVER1 = new Crops("silver1", ModFood.FRUIT_RESISTANCE);
+	public static final Crops NICKEL = new Crops("nickel", ModFood.FRUIT_RESISTANCE);
+	public static final Crops CONSTANTAN = new Crops("constantan", ModFood.FRUIT_RESISTANCE);
+	public static final Crops ELECTRUM = new Crops("electrum", ModFood.FRUIT_RESISTANCE);
+	
 	public static void register() {
 		
 		//Fruits
@@ -235,10 +250,28 @@ public class CropsInit {
 		registry(DEATH);
 		
 		//1.17
-		registry(GLOWINK);
-		registry(COPPER);
+/*		registry(GLOWINK);
 		registry(AMETHYST);
-		registry(GOAT); 
+		registry(GOAT);*/
+		
+		//Mekanism
+		registryWithMod(COPPER, "ingot", "mekanism");
+		registryWithMod(BRONZE, "ingot", "mekanism");
+		registryWithMod(REFINED_OBSIDIAN, "ingot", "mekanism");
+		registryWithMod(REFINED_GLOWSTONE, "ingot", "mekanism");
+		registryWithMod(STEEL, "ingot", "mekanism");
+		registryWithMod(OSMIUM, "ingot", "mekanism");
+		registryWithMod(TIN, "ingot", "mekanism");
+		registryWithMod(LEAD, "ingot", "mekanism");
+		registryWithMod(URANIUM, "ingot", "mekanism");
+
+		//Immersive Engineering
+/*		registryWithMod(ALUMINIUM, "ingot", "immersiveengineering");
+		registryWithMod(SILVER1, "ingot", "immersiveengineering");
+		registryWithMod(NICKEL, "ingot", "immersiveengineering");
+		registryWithMod(CONSTANTAN, "ingot", "immersiveengineering");
+		registryWithMod(ELECTRUM, "ingot", "immersiveengineering");
+	*/	
 	}
 	
 	public static void registry(Crops crop) {
@@ -250,9 +283,20 @@ public class CropsInit {
 	}
 
 	
-	public static void registryWithMod(Crops crop, String modName) {
-		if(!crops.contains(crop) && ModList.get().isLoaded(modName)) {
-			registry(crop);
+	public static void registryWithMod(Crops crop, String suf, String... modName) {
+		if(!crops.contains(crop)) {
+			boolean load = false;
+			int i = 0;
+			while(i < modName.length && !load) {
+				if(ModList.get().isLoaded(modName[i])) {
+					load = true;
+				}
+				i++;
+			}
+			if(load) {
+				registry(crop);
+				ItemInit.registerIngredient(crop, suf);
+			}
 		}
 	}
 

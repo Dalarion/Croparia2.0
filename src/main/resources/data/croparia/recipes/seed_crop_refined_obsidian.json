@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI", 
+    "SPS", 
+    "ISI"
+  ],
+  "key": {
+    "P": {
+      "item": "croparia:croparia2"
+    },
+    "S": [
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "minecraft:pumpkin_seeds"
+    },
+    {
+      "item": "minecraft:melon_seeds"
+    },
+    {
+      "item": "minecraft:beetroot_seeds"
+    }
+    ],
+    "I": {
+      "tag": "forge:ingots/refined_obsidian"
+    }
+  },
+  "result": {
+    "item": "croparia:seed_crop_refined_obsidian"
+  }
+}

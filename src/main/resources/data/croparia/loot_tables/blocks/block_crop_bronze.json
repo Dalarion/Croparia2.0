@@ -12,17 +12,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "croparia:block_crop_croparia",
+                  "block": "croparia:block_crop_bronze",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "croparia:croparia"
+              "name": "croparia:fruit_bronze"
             },
             {
               "type": "minecraft:item",
-              "name": "croparia:seed_crop_croparia"
+              "name": "croparia:seed_crop_bronze"
             }
           ]
         }
@@ -44,13 +44,13 @@
               }
             }
           ],
-          "name": "croparia:seed_crop_croparia"
+          "name": "croparia:seed_crop_bronze"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "croparia:block_crop_croparia",
+          "block": "croparia:block_crop_bronze",
           "properties": {
             "age": "7"
           }
