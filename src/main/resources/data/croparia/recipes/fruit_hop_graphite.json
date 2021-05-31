@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_hop_graphite"
+    }
+    ],
+  "result": {
+    "item": "croparia:hop_graphite_ingot",
+    "count": 2
+  }
+}

@@ -59,7 +59,7 @@ public class CollectorContainer extends Container{
 	      if (slot != null && slot.getHasStack()) {
 	         ItemStack itemstack1 = slot.getStack();
 	         itemstack = itemstack1.copy();
-	         if (index < 3 * 6 + 1) {
+	         if (index < 3 * 6) {
 	            if (!this.mergeItemStack(itemstack1, 3 * 6 + 1, this.inventorySlots.size(), true)) {
 	               return ItemStack.EMPTY;
 	            }

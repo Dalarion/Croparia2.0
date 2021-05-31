@@ -8,6 +8,16 @@
     "#forge:ingots/tin",
     "#forge:ingots/lead",
     "#forge:ingots/uranium",
-    "#forge:ingots/copper"
+    "#forge:ingots/copper",
+    "#forge:ingots/aluminum",
+    "#forge:ingots/silver",
+    "#forge:ingots/nickel",
+    "#forge:ingots/constantan",
+    "#forge:ingots/electrum",
+    "#forge:ingots/hop_graphite",
+    "#forge:ingots/signalum",
+    "#forge:ingots/electrum",
+    "#forge:ingots/enderium",
+    "#forge:ingots/invar"
   ]
 }

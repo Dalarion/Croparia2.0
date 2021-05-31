@@ -139,7 +139,13 @@ public class CropsInit {
 	public static final Crops SILVER1 = new Crops("silver1", ModFood.FRUIT_RESISTANCE);
 	public static final Crops NICKEL = new Crops("nickel", ModFood.FRUIT_RESISTANCE);
 	public static final Crops CONSTANTAN = new Crops("constantan", ModFood.FRUIT_RESISTANCE);
-	public static final Crops ELECTRUM = new Crops("electrum", ModFood.FRUIT_RESISTANCE);
+	public static final Crops ELECTRUM = new Crops("electrum", ModFood.FRUIT_RESISTANCE);  
+	public static final Crops HOP_GRAPHITE = new Crops("hop_graphite", ModFood.FRUIT_RESISTANCE);
+
+	public static final Crops INVAR = new Crops("invar", ModFood.FRUIT_RESISTANCE);
+	public static final Crops SIGNALUM = new Crops("signalum", ModFood.FRUIT_RESISTANCE);
+	public static final Crops LUMIUM = new Crops("lumium", ModFood.FRUIT_RESISTANCE);  
+	public static final Crops ENDERIUM = new Crops("enderium", ModFood.FRUIT_RESISTANCE);
 	
 	public static void register() {
 		
@@ -254,24 +260,32 @@ public class CropsInit {
 		registry(AMETHYST);
 		registry(GOAT);*/
 		
-		//Mekanism
-		registryWithMod(COPPER, "ingot", "mekanism");
-		registryWithMod(BRONZE, "ingot", "mekanism");
+		//Mekanism update
+		registryWithMod(COPPER, "ingot", "mekanism", "immersiveengineering", "thermal");
+		registryWithMod(BRONZE, "ingot", "mekanism", "thermal");
 		registryWithMod(REFINED_OBSIDIAN, "ingot", "mekanism");
 		registryWithMod(REFINED_GLOWSTONE, "ingot", "mekanism");
-		registryWithMod(STEEL, "ingot", "mekanism");
+		registryWithMod(STEEL, "ingot", "mekanism", "immersiveengineering");
 		registryWithMod(OSMIUM, "ingot", "mekanism");
-		registryWithMod(TIN, "ingot", "mekanism");
-		registryWithMod(LEAD, "ingot", "mekanism");
-		registryWithMod(URANIUM, "ingot", "mekanism");
+		registryWithMod(TIN, "ingot", "mekanism", "thermal");
+		registryWithMod(LEAD, "ingot", "mekanism", "immersiveengineering", "thermal");
+		registryWithMod(URANIUM, "ingot", "mekanism", "immersiveengineering");
 
-		//Immersive Engineering
-/*		registryWithMod(ALUMINIUM, "ingot", "immersiveengineering");
-		registryWithMod(SILVER1, "ingot", "immersiveengineering");
-		registryWithMod(NICKEL, "ingot", "immersiveengineering");
-		registryWithMod(CONSTANTAN, "ingot", "immersiveengineering");
-		registryWithMod(ELECTRUM, "ingot", "immersiveengineering");
-	*/	
+		//Immersive Engineering update
+		registryWithMod(ALUMINIUM, "ingot", "immersiveengineering");
+		registryWithMod(SILVER1, "ingot", "immersiveengineering", "thermal");
+		registryWithMod(NICKEL, "ingot", "immersiveengineering", "thermal");
+		registryWithMod(CONSTANTAN, "ingot", "immersiveengineering", "thermal");
+		registryWithMod(ELECTRUM, "ingot", "immersiveengineering", "thermal");
+		registryWithMod(HOP_GRAPHITE, "ingot", "immersiveengineering");
+		
+		//Thermal update
+		registryWithMod(INVAR, "ingot", "thermal");
+		registryWithMod(SIGNALUM, "ingot", "thermal");
+		registryWithMod(LUMIUM, "ingot", "thermal");
+		registryWithMod(ENDERIUM, "ingot", "thermal");
+		
+		
 	}
 	
 	public static void registry(Crops crop) {

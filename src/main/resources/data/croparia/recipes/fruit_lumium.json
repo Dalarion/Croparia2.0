@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_lumium"
+    }
+    ],
+  "result": {
+    "item": "croparia:lumium_ingot",
+    "count": 2
+  }
+}

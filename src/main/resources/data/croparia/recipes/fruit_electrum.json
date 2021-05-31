@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_electrum"
+    }
+    ],
+  "result": {
+    "item": "croparia:electrum_ingot",
+    "count": 2
+  }
+}

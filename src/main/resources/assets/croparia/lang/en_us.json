@@ -223,14 +223,26 @@
     "item.croparia.seed_crop_goat": "Goatus Seed",
     
     //Mekanism
-    "item.croparia.seed_crop_bronze": "Bronzios Seed",
-    "item.croparia.seed_crop_refined_obsidian": "Refined Obsidius Seed",
-    "item.croparia.seed_crop_refined_glowstone": "Refined Glowyas Seed",
-    "item.croparia.seed_crop_steel": "Steelus Seed",
-    "item.croparia.seed_crop_osmium": "Osmios Seed",
-    "item.croparia.seed_crop_tin": "Tinias Seed",
-    "item.croparia.seed_crop_lead": "Leadus Seed",
-    "item.croparia.seed_crop_uranium": "Uranius Seed",
+    "item.croparia.seed_crop_bronze": "Bronzios Fruit",
+    "item.croparia.seed_crop_refined_obsidian": "Refined Obsidius Fruit",
+    "item.croparia.seed_crop_refined_glowstone": "Refined Glowyas Fruit",
+    "item.croparia.seed_crop_steel": "Steelus Fruit",
+    "item.croparia.seed_crop_osmium": "Osmios Fruit",
+    "item.croparia.seed_crop_tin": "Tinias Fruit",
+    "item.croparia.seed_crop_lead": "Leadus Fruit",
+    "item.croparia.seed_crop_uranium": "Uranius Fruit",
+    //Immersive
+	"item.croparia.seed_crop_aluminium": "Aluminus Fruit",
+    "item.croparia.seed_crop_silver1": "Silverias Fruit",
+    "item.croparia.seed_crop_nickel": "Nickelus Fruit",
+    "item.croparia.seed_crop_constantan": "Constantas Fruit",
+    "item.croparia.seed_crop_electrum": "Electruis Fruit",
+    "item.croparia.seed_crop_hop_graphite": "HOP Graphites Fruit",
+    //Thermal
+	"item.croparia.seed_crop_invar": "Invas Fruit",
+    "item.croparia.seed_crop_signalum": "Signalus Fruit",
+    "item.croparia.seed_crop_lumium": "Lumius Fruit",
+    "item.croparia.seed_crop_enderium": "Enderius Fruit",
 
     "item.croparia.fruit_coal": "Coara Fruit",
     "item.croparia.fruit_iron": "Ironias Fruit",
@@ -349,6 +361,18 @@
     "item.croparia.fruit_tin": "Tinias Fruit",
     "item.croparia.fruit_lead": "Leadus Fruit",
     "item.croparia.fruit_uranium": "Uranius Fruit",
+    //Immersive
+	"item.croparia.fruit_aluminium": "Aluminus Fruit",
+    "item.croparia.fruit_silver1": "Silverias Fruit",
+    "item.croparia.fruit_nickel": "Nickelus Fruit",
+    "item.croparia.fruit_constantan": "Constantas Fruit",
+    "item.croparia.fruit_electrum": "Electruis Fruit",
+    "item.croparia.fruit_hop_graphite": "HOP Graphites Fruit",
+    //Thermal
+	"item.croparia.fruit_invar": "Invas Fruit",
+    "item.croparia.fruit_signalum": "Signalus Fruit",
+    "item.croparia.fruit_lumium": "Lumius Fruit",
+    "item.croparia.fruit_enderium": "Enderius Fruit",
     
     //Mekanism
 	"item.croparia.bronze_ingot": "Bronze Ingot",
@@ -360,6 +384,18 @@
     "item.croparia.lead_ingot": "Lead Ingot",
     "item.croparia.uranium_ingot": "Uranium Ingot",
     "item.croparia.copper_ingot": "Copper Ingot",
+    //Immersive
+	"item.croparia.aluminium_ingot": "Aluminum Ingot",
+    "item.croparia.silver_ingot": "Silver Ingot",
+    "item.croparia.nickel_ingot": "Nickel Ingot",
+    "item.croparia.constantan_ingot": "Constantan Ingot",
+    "item.croparia.electrum_ingot": "Electrum Ingot",
+    "item.croparia.hop_graphite_ingot": "HOP Graphite Ingot",
+    //Thermal
+	"item.croparia.invar_ingot": "Invar Ingot",
+    "item.croparia.signalum_ingot": "Signalum Ingot",
+    "item.croparia.lumium_ingot": "Lumium Ingot",
+    "item.croparia.enderium_ingot": "Enderium Ingot",
     
     
     "item.croparia.seed_stem_coal": "Coarastacio Seed",

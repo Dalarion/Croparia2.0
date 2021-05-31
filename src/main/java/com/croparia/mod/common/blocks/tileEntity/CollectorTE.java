@@ -80,7 +80,7 @@ public class CollectorTE extends LockableLootTileEntity implements ITickableTile
 	public void addItemStackInInventory(ItemStack itemstack) {
 		int i = this.getSizeInventory();
 		ItemStack stack = itemstack;
-        for(int j = 1; j < i && !stack.isEmpty(); ++j) {
+        for(int j = 0; j < i && !stack.isEmpty(); ++j) {
            if(this.getStackInSlot(j).getCount() < 64 && this.getStackInSlot(j).getItem() == stack.getItem() || this.getStackInSlot(j).isEmpty()) {
         	   this.setInventorySlotContents(j, new ItemStack(stack.getItem(), stack.getCount() + this.getStackInSlot(j).getCount()));
         	   stack = new ItemStack(stack.getItem(), stack.getCount() - this.getStackInSlot(j).getCount());
