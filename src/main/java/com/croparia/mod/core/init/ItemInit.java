@@ -253,7 +253,7 @@ public class ItemInit {
 	}	
 	
 	public static void registerIngredient(Crops crop, String suf) {
-		ITEMS.register(crop.getName() + "_" + suf,() -> new Item(new Item.Properties()));
+		ITEMS.register(crop.getName() + suf,() -> new Item(new Item.Properties()));
 	}
 }
 

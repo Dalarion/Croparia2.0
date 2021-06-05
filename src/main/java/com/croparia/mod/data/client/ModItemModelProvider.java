@@ -17,10 +17,12 @@ public class ModItemModelProvider extends ItemModelProvider{
 	@Override
 	protected void registerModels() {
 		ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
-		
+
+		System.out.println("Item Model :");
 		CropsInit.crops.forEach(crop -> {
-			
-			getBuilder("seed_crop_" + crop.getName()).parent(itemGenerated).texture("layer0", "item/seed/seed_crop_" + crop.getName());
+			System.out.println(crop.getName());
+			getBuilder("seed_crop_" + crop.getName()).parent(itemGenerated).texture("layer0", "items/seed/seed_crop_" + crop.getName());
+			getBuilder("fruit_" + crop.getName()).parent(itemGenerated).texture("layer0", "items/fruit/fruit_" + crop.getName());
 		});
 	}
 

@@ -1,6 +1,7 @@
 package com.croparia.mod.data;
 
 import com.croparia.mod.CropariaMod;
+import com.croparia.mod.data.client.ModBlockStateProvider;
 import com.croparia.mod.data.client.ModItemModelProvider;
 
 import net.minecraft.data.DataGenerator;
@@ -18,5 +19,6 @@ public class DataGenerators {
 		ExistingFileHelper helper = event.getExistingFileHelper(); 
 		
 		gen.addProvider(new ModItemModelProvider(gen, helper));
+		gen.addProvider(new ModBlockStateProvider(gen, helper));
 	}
 }

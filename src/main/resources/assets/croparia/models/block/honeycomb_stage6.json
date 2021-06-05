@@ -1,6 +1,6 @@
 {
-    "parent": "block/crop",
-    "textures": {
-        "crop": "croparia:blocks/crop/honeycomb_stage_6"
-    }
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "croparia:blocks/crop/honeycomb_stage_6"
+  }
 }

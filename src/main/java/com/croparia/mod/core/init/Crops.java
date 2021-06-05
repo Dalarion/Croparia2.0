@@ -8,21 +8,30 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 
 public class Crops {
-	
+
 	private String name;
+	private String type;
 	private RegistryObject<CropariaCrops> crop;
 	private RegistryObject<BlockNamedItem> seeds;
 	private RegistryObject<Item> fruit;
 	private Food food;
 	
+	public Crops(String name, Food food, String type) {
+		this.name = name;
+		this.food = food;
+		this.type = type;
+	}
+	
 	public Crops(String name, Food food) {
 		this.name = name;
 		this.food = food;
+		this.type = null;
 	}
 	
 	public Crops(String name) {
 		this.name = name;
 		this.food = null;
+		this.type = null;
 	}
 	
 	public Food getFood() {
@@ -52,8 +61,12 @@ public class Crops {
 	public void setFruit(RegistryObject<Item> fruit) {
 		this.fruit = fruit;
 	}
-	
+
 	public String getName(){
 		return this.name == null ? null : this.name;
+	}
+	
+	public String getType(){
+		return this.type == null ? null : this.type;
 	}
 }

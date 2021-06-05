@@ -13,6 +13,10 @@ public class RenderingHandler
     		RenderTypeLookup.setRenderLayer(crop.getCrop().get(), RenderType.getCutoutMipped());
     	});
     	
+    	CropsInit.fruits.forEach(fruit -> {
+    		RenderTypeLookup.setRenderLayer(fruit.getCrop().get(), RenderType.getCutoutMipped());
+    	});
+    	
     	BlockGreenhouse.blockGreenhouse.forEach(block -> {
     		RenderTypeLookup.setRenderLayer(block, RenderType.getTranslucent());
     	});

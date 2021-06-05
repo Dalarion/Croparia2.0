@@ -14,6 +14,7 @@ import net.minecraftforge.fml.ModList;
 public class CropsInit {
 
 	public static List<Crops> crops = new ArrayList<Crops>();
+	public static List<Crops> fruits = new ArrayList<Crops>();
 	private static final CropsInit INSTANCE = new CropsInit();
 	@SuppressWarnings("deprecation")
 	public static final Food FOOD_DRAGON_FRUIT = (new Food.Builder()).hunger(2).saturation(0.3F).effect(new EffectInstance(Effects.LEVITATION, 200, 5), 1F).effect(new EffectInstance(Effects.SLOW_FALLING, 6000, 1), 1F).effect(new EffectInstance(Effects.STRENGTH, 1000, 4), 0.3F).effect(new EffectInstance(Effects.ABSORPTION, 5000, 10), 0.3F).effect(new EffectInstance(Effects.RESISTANCE, 3500, 3), 0.3F).effect(new EffectInstance(Effects.FIRE_RESISTANCE, 2000, 3), 0.3F).effect(new EffectInstance(Effects.GLOWING, 6000, 0), 1F).effect(new EffectInstance(Effects.SPEED, 3000, 1), 0.3F).setAlwaysEdible().build();
@@ -63,19 +64,19 @@ public class CropsInit {
 	public static final Crops STRING = new Crops("string", ModFood.FRUIT_POISON);
 	public static final Crops SLIME = new Crops("slime", ModFood.FRUIT_JUMP_BOOST);
 	public static final Crops ZOMBIE = new Crops("zombie", ModFood.FRUIT_HUNGER);
-	public static final Crops VINE = new Crops("vine", ModFood.CROPARIA_FRUIT);
-	public static final Crops LILYPAD = new Crops("lilypad", ModFood.CROPARIA_FRUIT);
-	public static final Crops BUSH = new Crops("bush", ModFood.CROPARIA_FRUIT);
-	public static final Crops GRASS1 = new Crops("grass1", ModFood.CROPARIA_FRUIT);
-	public static final Crops LARGEFERN = new Crops("largefern", ModFood.CROPARIA_FRUIT);
-	public static final Crops TALLGRASS = new Crops("tallgrass", ModFood.CROPARIA_FRUIT);
-	public static final Crops FERN = new Crops("fern", ModFood.CROPARIA_FRUIT);
-	public static final Crops OAK = new Crops("oak", ModFood.CROPARIA_FRUIT);
-	public static final Crops SPRUCE = new Crops("spruce", ModFood.CROPARIA_FRUIT);
-	public static final Crops BIRCH = new Crops("birch", ModFood.CROPARIA_FRUIT);
-	public static final Crops JUNGLE = new Crops("jungle", ModFood.CROPARIA_FRUIT);
-	public static final Crops ACACIA = new Crops("acacia", ModFood.CROPARIA_FRUIT);
-	public static final Crops DARKOAK = new Crops("darkoak", ModFood.CROPARIA_FRUIT);
+	public static final Crops VINE = new Crops("vine", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops LILYPAD = new Crops("lilypad", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops BUSH = new Crops("bush", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops GRASS = new Crops("grass", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops LARGEFERN = new Crops("largefern", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops TALLGRASS = new Crops("tallgrass", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops FERN = new Crops("fern", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops OAK = new Crops("oak", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops SPRUCE = new Crops("spruce", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops BIRCH = new Crops("birch", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops JUNGLE = new Crops("jungle", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops ACACIA = new Crops("acacia", ModFood.CROPARIA_FRUIT, "natural");
+	public static final Crops DARKOAK = new Crops("darkoak", ModFood.CROPARIA_FRUIT, "natural");
 	public static final Crops APPLE = new Crops("apple", ModFood.CROPARIA_FRUIT);
 	public static final Crops GOLDENAPPLE = new Crops("goldenapple", ModFood.FRUIT_INSTANT_HEALTH);
 	public static final Crops BREAD = new Crops("bread", ModFood.CROPARIA_FRUIT);
@@ -147,16 +148,24 @@ public class CropsInit {
 	public static final Crops LUMIUM = new Crops("lumium", ModFood.FRUIT_RESISTANCE);  
 	public static final Crops ENDERIUM = new Crops("enderium", ModFood.FRUIT_RESISTANCE);
 	
+	public static final Crops PLASTIC = new Crops("plastic", ModFood.FRUIT_RESISTANCE);
+	
+	public static final Crops KNIGHTMETAL = new Crops("knightmetal", ModFood.FRUIT_RESISTANCE);
+	public static final Crops IRONWOOD = new Crops("ironwood", ModFood.FRUIT_RESISTANCE);
+	public static final Crops FIERY = new Crops("fiery", ModFood.FRUIT_RESISTANCE);  
+	public static final Crops STEELLEAF = new Crops("steelleaf", ModFood.FRUIT_RESISTANCE);
+	
+	
 	public static void register() {
 		
 		//Fruits
-		registry(ORANGE1);
-		registry(PEAR);
-		registry(LEMON);
-		registry(CHERRY);
-		registry(KIWI);
-		registry(APRICOT);
-		registry(BANANA);
+		registryFruit(ORANGE1);
+		registryFruit(PEAR);
+		registryFruit(LEMON);
+		registryFruit(CHERRY);
+		registryFruit(KIWI);
+		registryFruit(APRICOT);
+		registryFruit(BANANA);
 		
 		//MINECRAFT
 		registry(ELEMENTAL);
@@ -199,7 +208,7 @@ public class CropsInit {
 		registry(VINE);
 		registry(LILYPAD);
 		registry(BUSH);
-		registry(GRASS1);
+		registry(GRASS);
 		registry(LARGEFERN);
 		registry(TALLGRASS);
 		registry(FERN);
@@ -261,29 +270,38 @@ public class CropsInit {
 		registry(GOAT);*/
 		
 		//Mekanism update
-		registryWithMod(COPPER, "ingot", "mekanism", "immersiveengineering", "thermal");
-		registryWithMod(BRONZE, "ingot", "mekanism", "thermal");
-		registryWithMod(REFINED_OBSIDIAN, "ingot", "mekanism");
-		registryWithMod(REFINED_GLOWSTONE, "ingot", "mekanism");
-		registryWithMod(STEEL, "ingot", "mekanism", "immersiveengineering");
-		registryWithMod(OSMIUM, "ingot", "mekanism");
-		registryWithMod(TIN, "ingot", "mekanism", "thermal");
-		registryWithMod(LEAD, "ingot", "mekanism", "immersiveengineering", "thermal");
-		registryWithMod(URANIUM, "ingot", "mekanism", "immersiveengineering");
+		registryWithMod(COPPER, "_ingot", "mekanism", "immersiveengineering", "thermal");
+		registryWithMod(BRONZE, "_ingot", "mekanism", "thermal");
+		registryWithMod(REFINED_OBSIDIAN, "_ingot", "mekanism");
+		registryWithMod(REFINED_GLOWSTONE, "_ingot", "mekanism");
+		registryWithMod(STEEL, "_ingot", "mekanism", "immersiveengineering");
+		registryWithMod(OSMIUM, "_ingot", "mekanism");
+		registryWithMod(TIN, "_ingot", "mekanism", "thermal");
+		registryWithMod(LEAD, "_ingot", "mekanism", "immersiveengineering", "thermal");
+		registryWithMod(URANIUM, "_ingot", "mekanism", "immersiveengineering");
 
 		//Immersive Engineering update
-		registryWithMod(ALUMINIUM, "ingot", "immersiveengineering");
-		registryWithMod(SILVER1, "ingot", "immersiveengineering", "thermal");
-		registryWithMod(NICKEL, "ingot", "immersiveengineering", "thermal");
-		registryWithMod(CONSTANTAN, "ingot", "immersiveengineering", "thermal");
-		registryWithMod(ELECTRUM, "ingot", "immersiveengineering", "thermal");
-		registryWithMod(HOP_GRAPHITE, "ingot", "immersiveengineering");
+		registryWithMod(ALUMINIUM, "_ingot", "immersiveengineering");
+		registryWithMod(SILVER1, "_ingot", "immersiveengineering", "thermal");
+		registryWithMod(NICKEL, "_ingot", "immersiveengineering", "thermal");
+		registryWithMod(CONSTANTAN, "_ingot", "immersiveengineering", "thermal");
+		registryWithMod(ELECTRUM, "_ingot", "immersiveengineering", "thermal");
+		registryWithMod(HOP_GRAPHITE, "_ingot", "immersiveengineering");
 		
 		//Thermal update
-		registryWithMod(INVAR, "ingot", "thermal");
-		registryWithMod(SIGNALUM, "ingot", "thermal");
-		registryWithMod(LUMIUM, "ingot", "thermal");
-		registryWithMod(ENDERIUM, "ingot", "thermal");
+		registryWithMod(INVAR, "_ingot", "thermal");
+		registryWithMod(SIGNALUM, "_ingot", "thermal");
+		registryWithMod(LUMIUM, "_ingot", "thermal");
+		registryWithMod(ENDERIUM, "_ingot", "thermal");
+		
+		//Industrial Foregoing update
+	/*	registryWithMod(PLASTIC, "", "industrialforegoing", "croparia");
+		
+		//Twilight
+		registryWithMod(KNIGHTMETAL, "_ingot", "croparia", "twilightforest");
+		registryWithMod(IRONWOOD, "_ingot", "croparia", "twilightforest");
+		registryWithMod(FIERY, "_ingot", "twilightforest");
+		registryWithMod(STEELLEAF, "", "croparia", "twilightforest"); */
 		
 		
 	}
@@ -291,6 +309,14 @@ public class CropsInit {
 	public static void registry(Crops crop) {
 		if(!crops.contains(crop)) {
 			crops.add(crop);
+			BlockInit.registerCrop(crop);
+			ItemInit.registerFruitAndSeed(crop);
+		}
+	}
+	
+	public static void registryFruit(Crops crop) {
+		if(!fruits.contains(crop)) {
+			fruits.add(crop);
 			BlockInit.registerCrop(crop);
 			ItemInit.registerFruitAndSeed(crop);
 		}
