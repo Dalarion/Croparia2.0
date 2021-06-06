@@ -19,6 +19,10 @@
                 }
               ],
               "name": "croparia:fruit_elemental"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "croparia:seed_crop_elemental"
             }
           ]
         }
@@ -29,7 +33,27 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "parameters": {
+                "extra": 3,
+                "probability": 0.5714286
+              }
+            }
+          ],
           "name": "croparia:seed_crop_elemental"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "croparia:block_crop_elemental",
+          "properties": {
+            "age": "7"
+          }
         }
       ]
     }

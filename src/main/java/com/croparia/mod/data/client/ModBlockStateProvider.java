@@ -14,6 +14,11 @@ public class ModBlockStateProvider extends BlockStateProvider{
 	public ModBlockStateProvider(DataGenerator gen, ExistingFileHelper helper) {
 		super(gen, CropariaMod.mod_id, helper);
 	}
+	
+	@Override
+	public String getName() {
+		return "Croparia - Block State & Models";
+	}
 
 	@Override
 	protected void registerStatesAndModels() {

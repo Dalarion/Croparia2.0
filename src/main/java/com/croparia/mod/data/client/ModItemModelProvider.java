@@ -13,6 +13,11 @@ public class ModItemModelProvider extends ItemModelProvider{
 	public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
 		super(generator, CropariaMod.mod_id, existingFileHelper);
 	}
+	
+	@Override
+	public String getName() {
+		return "Croparia - Item Models";
+	}
 
 	@Override
 	protected void registerModels() {

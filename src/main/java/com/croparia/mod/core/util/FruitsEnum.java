@@ -1,7 +1,6 @@
 package com.croparia.mod.core.util;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 import net.minecraft.util.IStringSerializable;
 
@@ -14,7 +13,7 @@ public enum FruitsEnum implements IStringSerializable {
 	   APRICOT(5, "apricot"),
 	   BANANA(6, "banana");
 
-	   private static final FruitsEnum[] VALUES = Arrays.stream(values()).sorted(Comparator.comparingInt(FruitsEnum::getId)).toArray((fruitId) -> {
+	   private static final FruitsEnum[] VALUES = Arrays.stream(values()).toArray((fruitId) -> {
 	      return new FruitsEnum[fruitId];
 	   });
 

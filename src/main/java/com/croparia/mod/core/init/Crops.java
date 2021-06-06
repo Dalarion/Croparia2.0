@@ -14,24 +14,52 @@ public class Crops {
 	private RegistryObject<CropariaCrops> crop;
 	private RegistryObject<BlockNamedItem> seeds;
 	private RegistryObject<Item> fruit;
+	private Item ingredient;
 	private Food food;
+	private int tier;
 	
-	public Crops(String name, Food food, String type) {
+	public Crops(String name, int tier, Food food, Item ingredient, String type) {
 		this.name = name;
+		this.tier = tier;
 		this.food = food;
+		this.ingredient = ingredient;
 		this.type = type;
 	}
 	
-	public Crops(String name, Food food) {
+	public Crops(String name, int tier, Food food, Item ingredient) {
 		this.name = name;
+		this.tier = tier;
 		this.food = food;
+		this.ingredient = ingredient;
+		this.type = null;
+	}
+	
+	public Crops(String name, int tier, Food food) {
+		this.name = name;
+		this.tier = tier;
+		this.food = food;
+		this.ingredient = null;
+		this.type = null;
+	}
+	
+	public Crops(String name, int tier) {
+		this.name = name;
+		this.tier = tier;
+		this.food = null;
+		this.ingredient = null;
 		this.type = null;
 	}
 	
 	public Crops(String name) {
 		this.name = name;
+		this.tier = 0;
 		this.food = null;
+		this.ingredient = null;
 		this.type = null;
+	}
+	
+	public Item getIngredient() {
+		return this.ingredient == null ? null : this.ingredient;
 	}
 	
 	public Food getFood() {
@@ -68,5 +96,9 @@ public class Crops {
 	
 	public String getType(){
 		return this.type == null ? null : this.type;
+	}
+	
+	public int getTier() {
+		return tier;
 	}
 }

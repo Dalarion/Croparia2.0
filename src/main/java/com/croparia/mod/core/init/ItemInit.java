@@ -187,6 +187,41 @@ public class ItemInit {
 	public static final RegistryObject<Item> TIER_ICON_1 = ITEMS.register("tier_icon_1", () -> new Item(new Item.Properties()));
 	public static final RegistryObject<Item> TIER_ICON_2 = ITEMS.register("tier_icon_2", () -> new Item(new Item.Properties()));
 	
+	public static Item getCropariaItemByTier(int tier) {
+		Item ret = Items.AIR;
+		switch(tier) {
+	        case 1 : {
+	        	ret = CROPARIA.get();
+	        	break;
+	        }
+	        case 2 : {
+	        	ret = CROPARIA2.get();
+	        	break;
+	        }
+	        case 3 : {
+	        	ret = CROPARIA3.get();
+	        	break;
+	        }
+	        case 4 : {
+	        	ret = CROPARIA4.get();
+	        	break;
+	        }
+	        case 5 : {
+	        	ret = CROPARIA5.get();
+	        	break;
+	        }
+	        case 6 : {
+	        	ret = CROPARIA6.get();
+	        	break;
+	        }
+	        case 7 : {
+	        	ret = CROPARIA7.get();
+	        	break;
+	        }
+		}
+		return ret;
+	}
+	
 	public static Item getTierIconFromRitualTier(int tier) {
 		Item ret = Items.AIR;
 		switch(tier) {

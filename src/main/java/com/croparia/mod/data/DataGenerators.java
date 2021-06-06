@@ -3,6 +3,7 @@ package com.croparia.mod.data;
 import com.croparia.mod.CropariaMod;
 import com.croparia.mod.data.client.ModBlockStateProvider;
 import com.croparia.mod.data.client.ModItemModelProvider;
+import com.croparia.mod.data.recipes.ModRecipeProvider;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -20,5 +21,7 @@ public class DataGenerators {
 		
 		gen.addProvider(new ModItemModelProvider(gen, helper));
 		gen.addProvider(new ModBlockStateProvider(gen, helper));
+		gen.addProvider(new ModLootTableProvider(gen));
+		//gen.addProvider(new ModRecipeProvider(gen));
 	}
 }

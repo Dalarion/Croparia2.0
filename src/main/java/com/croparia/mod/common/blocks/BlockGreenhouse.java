@@ -31,9 +31,7 @@ public class BlockGreenhouse extends Block implements ITileEntityProvider{
 	protected static final VoxelShape NULL = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D);
 	
 	public BlockGreenhouse() {
-		super(AbstractBlock.Properties.create(Material.GLASS).tickRandomly().setLightLevel((state) -> {
-		      return 15;
-		   }));
+		super(AbstractBlock.Properties.create(Material.GLASS).tickRandomly());
 		blockGreenhouse.add(this);
 	}
 	
