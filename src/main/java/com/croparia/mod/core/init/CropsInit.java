@@ -154,7 +154,7 @@ public class CropsInit {
 	public static final Crops KNIGHTMETAL = new Crops("knightmetal", 3, ModFood.FRUIT_RESISTANCE);
 	public static final Crops IRONWOOD = new Crops("ironwood", 3, ModFood.FRUIT_RESISTANCE);
 	public static final Crops FIERY = new Crops("fiery", 3, ModFood.FRUIT_RESISTANCE);  
-	public static final Crops STEELLEAF = new Crops("steelleaf", 3, ModFood.FRUIT_RESISTANCE);
+	public static final Crops STEELEAF = new Crops("steeleaf", 3, ModFood.FRUIT_RESISTANCE);
 	
 	
 	public static void register() {
@@ -294,14 +294,11 @@ public class CropsInit {
 		registryWithMod(LUMIUM, "_ingot", "thermal");
 		registryWithMod(ENDERIUM, "_ingot", "thermal");
 		
-		//Industrial Foregoing update
-	/*	registryWithMod(PLASTIC, "", "industrialforegoing", "croparia");
-		
-		//Twilight
-		registryWithMod(KNIGHTMETAL, "_ingot", "croparia", "twilightforest");
-		registryWithMod(IRONWOOD, "_ingot", "croparia", "twilightforest");
+		//Twilight Forest
+		registryWithMod(KNIGHTMETAL, "_ingot", "twilightforest");
+		registryWithMod(IRONWOOD, "_ingot", "twilightforest");
 		registryWithMod(FIERY, "_ingot", "twilightforest");
-		registryWithMod(STEELLEAF, "", "croparia", "twilightforest"); */
+		registryWithMod(STEELEAF, "_ingot", "twilightforest"); 
 		
 		
 	}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_steeleaf"
+    }
+    ],
+  "result": {
+    "item": "croparia:steeleaf_ingot",
+    "count": 2
+  }
+}
