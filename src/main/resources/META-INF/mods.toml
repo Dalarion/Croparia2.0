@@ -5,7 +5,7 @@ issueTrackerURL="" #optional
  
 [[mods]] #mandatory
 modId="croparia" #mandatory
-version="3.3" #mandatory
+version="3.3.1" #mandatory
 displayName="Croparia" #mandatory
 updateJSONURL="" #optional
 displayURL="" #optional

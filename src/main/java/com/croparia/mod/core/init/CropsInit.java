@@ -155,6 +155,14 @@ public class CropsInit {
 	public static final Crops IRONWOOD = new Crops("ironwood", 3, ModFood.FRUIT_RESISTANCE);
 	public static final Crops FIERY = new Crops("fiery", 3, ModFood.FRUIT_RESISTANCE);  
 	public static final Crops STEELEAF = new Crops("steeleaf", 3, ModFood.FRUIT_RESISTANCE);
+
+	public static final Crops AQUAMARINE = new Crops("aquamarine", 2, ModFood.FRUIT_RESISTANCE);  
+	public static final Crops STARMETAL = new Crops("starmetal", 2, ModFood.FRUIT_LEVITATION);
+	
+	public static final Crops MANASTEEL = new Crops("manasteel", 2, ModFood.FRUIT_RESISTANCE);
+	public static final Crops TERRASTEEL = new Crops("terrasteel", 3, ModFood.FRUIT_RESISTANCE);
+	public static final Crops ELEMENTIUM = new Crops("elementium", 3, ModFood.FRUIT_RESISTANCE);  
+	public static final Crops DRAGONSTONE = new Crops("dragonstone", 3, ModFood.FRUIT_RESISTANCE);
 	
 	
 	public static void register() {
@@ -299,6 +307,17 @@ public class CropsInit {
 		registryWithMod(IRONWOOD, "_ingot", "twilightforest");
 		registryWithMod(FIERY, "_ingot", "twilightforest");
 		registryWithMod(STEELEAF, "_ingot", "twilightforest"); 
+		
+		//Astral Sorcery
+		registryWithMod(AQUAMARINE, "", "croparia", "astralsorcery");
+		registryWithMod(STARMETAL, "_ingot", "croparia", "astralsorcery"); 
+		
+		//Botania
+		registryWithMod(MANASTEEL, "_ingot", "croparia", "botania");
+		registryWithMod(TERRASTEEL, "_ingot", "croparia", "botania");
+		registryWithMod(ELEMENTIUM, "_ingot", "croparia", "botania");
+		registryWithMod(DRAGONSTONE, "", "croparia", "botania"); 
+		
 		
 		
 	}

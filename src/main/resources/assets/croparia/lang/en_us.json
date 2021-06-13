@@ -248,6 +248,14 @@
     "item.croparia.seed_crop_ironwood": "Ironwood Seed",
     "item.croparia.seed_crop_steeleaf": "Steeleaf Seed",
     "item.croparia.seed_crop_fiery": "Fiery Seed",
+	//Astral
+	"item.croparia.seed_crop_starmetal": "Starmetalis Seed",
+    "item.croparia.seed_crop_aquamarine": "Aquamarius Seed",
+	//Botania
+	"item.croparia.seed_crop_manasteel": "Manasteelus Seed",
+    "item.croparia.seed_crop_terrasteel": "Terrasteelus Seed",
+    "item.croparia.seed_crop_elementium": "Elementius Seed",
+    "item.croparia.seed_crop_dragonstone": "Dragonstonus Seed",
 
     "item.croparia.fruit_coal": "Coara Fruit",
     "item.croparia.fruit_iron": "Ironias Fruit",
@@ -383,6 +391,14 @@
     "item.croparia.fruit_ironwood": "Ironwood Fruit",
     "item.croparia.fruit_steeleaf": "Steeleaf Fruit",
     "item.croparia.fruit_fiery": "Fiery Fruit",
+	//Astral
+	"item.croparia.fruit_starmetal": "Starmetalis Fruit",
+    "item.croparia.fruit_aquamarine": "Aquamarius Fruit",
+	//Botania
+	"item.croparia.fruit_manasteel": "Manasteelus Fruit",
+    "item.croparia.fruit_terrasteel": "Terrasteelus Fruit",
+    "item.croparia.fruit_elementium": "Elementius Fruit",
+    "item.croparia.fruit_dragonstone": "Dragonstonus Fruit",
     
     //Mekanism
 	"item.croparia.bronze_ingot": "Bronze Ingot",
@@ -411,6 +427,14 @@
     "item.croparia.ironwood_ingot": "Ironwood Ingot",
     "item.croparia.steeleaf_ingot": "Steeleaf Ingot",
     "item.croparia.fiery_ingot": "Fiery Ingot",
+	//Astral
+	"item.croparia.starmetal_ingot": "Starmetal Ingot",
+    "item.croparia.aquamarine": "Aquamarine",
+	//Botania
+	"item.croparia.manasteel_ingot": "Manasteel Ingot",
+    "item.croparia.terrasteel_ingot": "Terrasteel Ingot",
+    "item.croparia.elementium_ingot": "Elementium Ingot",
+    "item.croparia.dragonstone": "Dragonstone",
     
     
     "item.croparia.seed_stem_coal": "Coarastacio Seed",

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_terrasteel"
+    }
+    ],
+  "result": {
+    "item": "croparia:terrasteel_ingot",
+    "count": 2
+  }
+}

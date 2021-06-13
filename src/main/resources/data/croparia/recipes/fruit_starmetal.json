@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "croparia:fruit_starmetal"
+    }
+    ],
+  "result": {
+    "item": "croparia:starmetal_ingot",
+    "count": 2
+  }
+}

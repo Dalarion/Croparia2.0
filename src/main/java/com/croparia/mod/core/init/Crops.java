@@ -26,6 +26,14 @@ public class Crops {
 		this.type = type;
 	}
 	
+	public Crops(String name, int tier, Food food, String type) {
+		this.name = name;
+		this.tier = tier;
+		this.food = food;
+		this.ingredient = null;
+		this.type = type;
+	}
+	
 	public Crops(String name, int tier, Food food, Item ingredient) {
 		this.name = name;
 		this.tier = tier;
