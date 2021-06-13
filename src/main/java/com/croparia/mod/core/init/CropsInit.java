@@ -309,14 +309,14 @@ public class CropsInit {
 		registryWithMod(STEELEAF, "_ingot", "twilightforest"); 
 		
 		//Astral Sorcery
-		registryWithMod(AQUAMARINE, "", "croparia", "astralsorcery");
-		registryWithMod(STARMETAL, "_ingot", "croparia", "astralsorcery"); 
+		registryWithMod(AQUAMARINE, "", "astralsorcery");
+		registryWithMod(STARMETAL, "_ingot", "astralsorcery"); 
 		
 		//Botania
-		registryWithMod(MANASTEEL, "_ingot", "croparia", "botania");
-		registryWithMod(TERRASTEEL, "_ingot", "croparia", "botania");
-		registryWithMod(ELEMENTIUM, "_ingot", "croparia", "botania");
-		registryWithMod(DRAGONSTONE, "", "croparia", "botania"); 
+		registryWithMod(MANASTEEL, "_ingot", "botania");
+		registryWithMod(TERRASTEEL, "_ingot", "botania");
+		registryWithMod(ELEMENTIUM, "_ingot", "botania");
+		registryWithMod(DRAGONSTONE, "", "botania"); 
 		
 		
 		
