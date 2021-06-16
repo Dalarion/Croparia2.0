@@ -464,8 +464,8 @@
     "item.croparia.seed_stem_netherwart": "Nether Wartiustacio Seed",
     "item.croparia.seed_stem_bookshelf": "Bookshestacio Seed",
 
-    "itemGroup.CROP": "Croparia : Plants",
-    "itemGroup.MAIN": "Croparia",
+    "itemGroup.crop": "Croparia : Plants",
+    "itemGroup.main": "Croparia",
 
     "block.croparia.coal_furnace": "Coal Furnace",
     "block.croparia.iron_furnace": "Iron Furnace",

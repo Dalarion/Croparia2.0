@@ -34,8 +34,8 @@ public class CropariaMod
 {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String mod_id = "croparia";
-    public static final ItemGroup MAIN = new CropariaGroup("MAIN");
-    public static final ItemGroup CROP = new CropariaCropGroup("CROP");
+    public static final ItemGroup MAIN = new CropariaGroup("main");
+    public static final ItemGroup CROP = new CropariaCropGroup("crop");
     
     public CropariaMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -66,7 +66,13 @@ public class CropariaMod
     {
     	RenderingHandler.init();
     }
-
+    
+    public static void say(String message , World world, BlockPos pos)
+  	{
+  		PlayerEntity player = world.getClosestPlayer(pos.getX(), pos.getY(), pos.getZ(), 5, false);
+  		player.sendMessage(new StringTextComponent(message), player.getUniqueID());
+  	}    
+    
     public static class CropariaGroup extends ItemGroup{
 		public CropariaGroup(String label) {
 			super(label);
@@ -76,12 +82,6 @@ public class CropariaMod
 			return ItemInit.ELEMATILIUS.get().getDefaultInstance();
 		}
     }
-    
-    public static void say(String message , World world, BlockPos pos)
-  	{
-  		PlayerEntity player = world.getClosestPlayer(pos.getX(), pos.getY(), pos.getZ(), 5, false);
-  		player.sendMessage(new StringTextComponent(message), player.getUniqueID());
-  	}    
     
     public static class CropariaCropGroup extends ItemGroup{
 		public CropariaCropGroup(String label) {

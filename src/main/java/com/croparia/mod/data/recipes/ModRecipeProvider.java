@@ -2,63 +2,49 @@ package com.croparia.mod.data.recipes;
 
 import java.util.function.Consumer;
 
+import com.croparia.mod.CropariaMod;
+import com.croparia.mod.core.init.Crops;
 import com.croparia.mod.core.init.CropsInit;
 import com.croparia.mod.core.init.ItemInit;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.data.ShapelessRecipeBuilder;
-import net.minecraftforge.common.Tags.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
-public class ModRecipeProvider extends RecipeProvider{
+public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
-	public ModRecipeProvider(DataGenerator generatorIn) {
-		super(generatorIn);
+	  public ModRecipeProvider(DataGenerator generatorIn) {
+	    super(generatorIn);
+	  }
+
+	  @Override
+	  protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
+		  CropsInit.crops.forEach(crop -> {
+			  System.out.println(crop.getName());
+			  if(crop.getIngredient() != null) {
+				  System.out.println("ok");
+				  ShapedRecipeBuilder.shapedRecipe(crop.getSeeds().get())
+			      .key('M', crop.getIngredient())
+			      .key('S', ItemInit.getCropariaItemByTier(crop.getTier()))
+			      .key('P', Tags.Items.SEEDS)
+			      .patternLine("MPM")
+			      .patternLine("PSP")
+			      .patternLine("MPM")
+			      .addCriterion("has_" + crop.getName() + "_ingredient", hasItem(crop.getIngredient()))
+			      .build(consumer, location("seed_crop_" + crop.getName()));
+			  }
+		  }); 
+	  }
+
+	  private static ResourceLocation location(String id) {
+	    return new ResourceLocation(CropariaMod.mod_id, id);
+	  }
 	}
-	
-	@Override
-	public String getName() {
-		return "Croparia - Recipes";
-	}
-	
-	@Override
-	protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-		CropsInit.crops.forEach(crop -> {
-			System.out.println(crop.getName());
-			if(crop.getName() == CropsInit.ELEMENTAL.getName()) {
-				ShapedRecipeBuilder.shapedRecipe(crop.getSeeds().get())
-				.key('C', ItemInit.getCropariaItemByTier(crop.getTier()))
-				.key('S', Items.SEEDS)
-				.key('I', ItemInit.ELEMATILIUS.get())
-				.patternLine("ISI")
-				.patternLine("SCS")
-				.patternLine("ISI")
-				.addCriterion("has_item", hasItem(crop.getSeeds().get()))
-				.build(consumer);
-				
-				ShapelessRecipeBuilder.shapelessRecipe(crop.getIngredient())
-				.addIngredient(crop.getFruit().get())
-				.addCriterion("has_item", hasItem(crop.getFruit().get()))
-				.build(consumer);
-			}
-			else {
-				ShapedRecipeBuilder.shapedRecipe(crop.getSeeds().get())
-				.key('C', ItemInit.getCropariaItemByTier(crop.getTier()))
-				.key('S', Items.SEEDS)
-				.key('I', crop.getIngredient())
-				.patternLine("ISI")
-				.patternLine("SCS")
-				.patternLine("ISI")
-				.addCriterion("has_item", hasItem(crop.getSeeds().get()))
-				.build(consumer);
-				
-				ShapelessRecipeBuilder.shapelessRecipe(crop.getIngredient())
-				.addIngredient(crop.getFruit().get())
-				.addCriterion("has_item", hasItem(crop.getFruit().get()))
-				.build(consumer);
-			}
-		});
-	}
-}

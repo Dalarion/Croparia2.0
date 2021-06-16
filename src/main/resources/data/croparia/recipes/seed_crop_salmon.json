@@ -1,34 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ISI", 
-    "SPS", 
-    "ISI"
+    "MPM",
+    "PSP",
+    "MPM"
   ],
   "key": {
-    "P": {
+    "M": {
+      "item": "minecraft:salmon"
+    },
+    "S": {
       "item": "croparia:croparia"
     },
-    "S": [
-    {
-      "item": "minecraft:wheat_seeds"
-    },
-    {
-      "item": "minecraft:pumpkin_seeds"
-    },
-    {
-      "item": "minecraft:melon_seeds"
-    },
-    {
-      "item": "minecraft:beetroot_seeds"
-    }
-    ],
-    "I": {
-      "item": "minecraft:salmon"
+    "P": {
+      "tag": "forge:seeds"
     }
   },
   "result": {
     "item": "croparia:seed_crop_salmon"
-  },
-    "group": "CropariaSeedT1"
+  }
 }
